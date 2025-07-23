@@ -15,7 +15,7 @@ const WorksPageWrapper = () => {
 
   return (
     <>
-    <div className="w-full min-h-screen sm:h-screen relative sm:overflow-hidden">
+    <div className="w-full h-screen relative sm:overflow-hidden">
       <Beams
         beamWidth={2}
         beamHeight={15}
