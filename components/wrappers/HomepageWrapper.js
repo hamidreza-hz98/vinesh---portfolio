@@ -1,9 +1,6 @@
-import { Button } from "../ui/button";
 import DarkVeil from "../ui/reactbits/DarkVeil";
 import GlassIcons from "../ui/reactbits/GlassIcons";
-import Link from "next/link";
 import React from "react";
-import RotatingText from "../ui/reactbits/RotatingText";
 import ShinyText from "../ui/reactbits/ShinyText";
 import TextType from "../ui/reactbits/TextType";
 import { getCurrentLocale } from "@/utils/locale";
@@ -16,7 +13,7 @@ const HomepageWrapper = () => {
 
   return (
     <div className="w-full min-h-screen sm:h-screen relative sm:overflow-hidden">
-      <DarkVeil speed={1} />
+      <DarkVeil speed={2} />
 
       <div className="absolute inset-0 top-16 flex flex-col items-center justify-center">
         <div className="text-start px-4">
