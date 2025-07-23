@@ -2,20 +2,182 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 240 10% 4%;            /* Very dark slate */
+    --foreground: 0 0% 98%;              /* Bright white */
+
+    --card: 240 6% 6%;                   /* Slightly lighter than background */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 6% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 245 95% 68%;              /* Electric Indigo */
+    --primary-foreground: 0 0% 100%;     /* Pure white for contrast */
+
+    --secondary: 45 100% 58%;            /* Amber / Warm Yellow */
+    --secondary-foreground: 0 0% 0%;
+
+    --accent: 180 90% 65%;               /* Cyber Mint (Cyan-Turquoise blend) */
+    --accent-foreground: 222 47% 11%;    /* Very dark blue */
+
+    --muted: 240 5% 14%;
+    --muted-foreground: 240 5% 60%;
+
+    --destructive: 0 80% 45%;            /* Strong red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 4% 18%;
+    --input: 240 4% 18%;
+    --ring: 245 90% 70%;
+
+    --chart-1: 245 95% 68%;              /* Same as primary */
+    --chart-2: 180 90% 65%;              /* Same as accent */
+    --chart-3: 45 100% 58%;              /* Same as secondary */
+    --chart-4: 295 80% 70%;              /* Soft purple */
+    --chart-5: 12 90% 60%;               /* Orange-red */
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* If needed for overrides, but not required here */
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.darkveil-canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.icon-btns {
+  display: grid;
+  grid-gap: 5em;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  padding: 3em 0;
+  overflow: visible;
+}
+
+.icon-btn {
+  background-color: transparent;
+  outline: none;
+  position: relative;
+  width: 4.5em;
+  height: 4.5em;
+  perspective: 24em;
+  transform-style: preserve-3d;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.icon-btn__back,
+.icon-btn__front,
+.icon-btn__label {
+  transition: opacity 0.3s cubic-bezier(0.83, 0, 0.17, 1),
+    transform 0.3s cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.icon-btn__back,
+.icon-btn__front {
+  border-radius: 1.25em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-btn__back {
+  box-shadow: 0.5em -0.5em 0.75em hsla(223, 10%, 10%, 0.15);
+  display: block;
+  transform: rotate(15deg);
+  transform-origin: 100% 100%;
+}
+
+.icon-btn__front {
+  background-color: hsla(0, 0%, 100%, 0.15);
+  box-shadow: 0 0 0 0.1em hsla(0, 0%, 100%, 0.3) inset;
+  backdrop-filter: blur(0.75em);
+  -webkit-backdrop-filter: blur(0.75em);
+  display: flex;
+  transform-origin: 80% 50%;
+}
+.icon-btn__icon {
+  margin: auto;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn__label {
+  font-size: 1em;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 2;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  transform: translateY(0);
+  opacity: 1; /* Show by default */
+}
+
+/* Desktop interaction effect */
+@media (min-width: 768px) {
+  .icon-btn__label {
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .icon-btn:focus-visible .icon-btn__label,
+  .icon-btn:hover .icon-btn__label {
+    opacity: 1;
+    transform: translateY(20%);
+  }
+
+  .icon-btns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.shiny-text {
+  color: #b5b5b5;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  backdrop-filter: blur(20px);;
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shiny-text.disabled {
+  animation: none;
 }
