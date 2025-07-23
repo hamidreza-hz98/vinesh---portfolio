@@ -157,16 +157,16 @@
   color: #b5b5b5;
   background: linear-gradient(
     120deg,
-    rgba(255, 255, 255, 0) 40%,
-    rgba(255, 255, 255, 0.8) 50%,
-    rgba(255, 255, 255, 0) 60%
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 80%
   );
   backdrop-filter: blur(20px);;
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   display: inline-block;
-  animation: shine 5s linear infinite;
+  animation: shine 2s linear infinite;
 }
 
 @keyframes shine {

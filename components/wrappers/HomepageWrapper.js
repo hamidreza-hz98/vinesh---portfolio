@@ -18,7 +18,7 @@ const HomepageWrapper = () => {
     <div className="w-full min-h-screen sm:h-screen relative sm:overflow-hidden">
       <DarkVeil speed={1} />
 
-      <div className="absolute inset-0 top-48 sm:top-0 flex flex-col items-center justify-center">
+      <div className="absolute inset-0 top-16 flex flex-col items-center justify-center">
         <div className="text-start px-4">
           <TextType
             text={[
@@ -35,7 +35,7 @@ const HomepageWrapper = () => {
           />
         </div>
 
-        <div className="p-4 flex items-center justify-center">
+        <div className="mt-2 p-4 flex items-center justify-center">
           <h2 className="text-xl me-2"> {t("project_in_mind")} </h2>
 
           <ShinyText
