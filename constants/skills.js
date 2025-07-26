@@ -78,6 +78,19 @@ export const skills = [
         },
         icon: "/images/skills/nuxt.svg",
       },
+      {
+        name: {
+          en: "JQuery",
+          pt: "JQuery",
+          fa: "جی‌کوئری",
+        },
+        description: {
+          en: "A fast, small, and feature-rich JavaScript library for easier DOM manipulation, event handling, and animation.",
+          pt: "Uma biblioteca JavaScript rápida, leve e rica em recursos para facilitar a manipulação do DOM, tratamento de eventos e animações.",
+          fa: "کتابخانه‌ای سریع، کم‌حجم و قدرتمند برای ساده‌سازی دستکاری DOM، مدیریت رویدادها و انیمیشن‌ها در جاوااسکریپت.",
+        },
+        icon: "/images/skills/jquery.png",
+      },
     ],
   },
   {
@@ -230,6 +243,19 @@ export const skills = [
           fa: "پلتفرم استقرار برای اپلیکیشن‌های فرانت‌اند.",
         },
         icon: "/images/skills/vercel.png",
+      },
+      {
+        name: {
+          en: "Nginx",
+          pt: "Nginx",
+          fa: "انجین‌ایکس (Nginx)",
+        },
+        description: {
+          en: "A high-performance web server, reverse proxy, and load balancer used for serving static content and handling concurrent connections efficiently.",
+          pt: "Um servidor web de alto desempenho, proxy reverso e balanceador de carga usado para servir conteúdo estático e lidar com conexões simultâneas de forma eficiente.",
+          fa: "یک وب‌سرور پرسرعت، پراکسی معکوس و لود بالانسر که برای ارائه محتوای ایستا و مدیریت هم‌زمانی درخواست‌ها به‌صورت کارآمد استفاده می‌شود.",
+        },
+        icon: "/images/skills/nginx.png",
       },
     ],
   },

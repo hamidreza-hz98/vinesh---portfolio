@@ -8,7 +8,7 @@ const ProjectCard = ({ project, className = "" }) => {
   const locale = getCurrentLocale();
 
   return (
-    <div className={`relative rounded-xl hover:scale-[105%] transition-transform duration-700 ${className}`.trim()}>
+    <div className={`relative w-full h-fit rounded-xl hover:scale-[105%] transition-transform duration-700 ${className}`.trim()}>
       <div className="">
         <img
           src={project.image}
@@ -18,11 +18,11 @@ const ProjectCard = ({ project, className = "" }) => {
         />
       </div>
 
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[90%] bg-background_a backdrop-blur shadow-xl rounded-2xl p-4">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[90%] bg-foreground/25 backdrop-blur shadow-xl rounded-2xl p-4">
         <div className="flex flex-col items-start justify-start w-full">
           <span className="text-background font-semibold">{project.name[locale]}</span>
 
-          <div className="flex items-center justify-between mt-2 w-full">
+          <div className="flex flex-col items-start justify-center mt-2 w-full">
             <a
               href={project.url}
               className="flex items-center justify-start text-primary"
@@ -34,7 +34,7 @@ const ProjectCard = ({ project, className = "" }) => {
               <FaExternalLinkAlt className="mx-2" />
             </a>
 
-            <div className="flex items-center justify-between text-background">
+            <div className="flex items-center justify-between text-background mt-1">
               <p className="text-xs">
               { t("technologies") }
               </p>
