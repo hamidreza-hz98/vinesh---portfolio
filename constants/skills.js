@@ -141,6 +141,15 @@ export const skills = [
         },
         icon: "/images/skills/mui.svg",
       },
+      {
+        name: { en: "Vuetify", pt: "Vuetify", fa: "ویوتیفای" },
+        description: {
+          en: "A popular Material Design component framework for Vue.js that helps developers build responsive and beautiful UIs quickly.",
+          pt: "Um popular framework de componentes baseado no Material Design para Vue.js que ajuda desenvolvedores a criar interfaces bonitas e responsivas rapidamente.",
+          fa: "یک فریم‌ورک محبوب مبتنی بر Material Design برای Vue.js است که به توسعه‌دهندگان کمک می‌کند رابط‌های کاربری زیبا و واکنش‌گرا را به‌سرعت بسازند.",
+        },
+        icon: "/images/skills/vuetify.svg",
+      },
     ],
   },
   {
@@ -250,7 +259,11 @@ export const skills = [
         icon: "/images/skills/teamwork.webp",
       },
       {
-        name: { en: "Problem Solving", pt: "Resolução de Problemas", fa: "حل مسئله" },
+        name: {
+          en: "Problem Solving",
+          pt: "Resolução de Problemas",
+          fa: "حل مسئله",
+        },
         description: {
           en: "Approaches challenges with logic and creativity.",
           pt: "Resolve desafios com lógica e criatividade.",
@@ -259,7 +272,11 @@ export const skills = [
         icon: "/images/skills/problem_solving.png",
       },
       {
-        name: { en: "Agile & Scrum", pt: "Ágil & Scrum", fa: "اَجایل و اسکرام" },
+        name: {
+          en: "Agile & Scrum",
+          pt: "Ágil & Scrum",
+          fa: "اَجایل و اسکرام",
+        },
         description: {
           en: "Familiar with Agile methodologies and Scrum rituals.",
           pt: "Familiaridade com metodologias ágeis e Scrum.",

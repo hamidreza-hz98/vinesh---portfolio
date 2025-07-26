@@ -84,17 +84,17 @@ const SkillsPageWrapper = () => {
               {skill.name[locale]}
             </h2>
 
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 mt-4 gap-8">
+            <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 mt-4 gap-8">
               {skill.items.map((item) => (
                 <TiltedCard
                   key={item.name[locale]}
                   imageSrc={item.icon}
                   altText={item.name[locale]}
                   captionText={item.description[locale]}
-                  containerHeight="120px"
-                  containerWidth="120px"
-                  imageHeight="120px"
-                  imageWidth="120px"
+                  containerHeight="100px"
+                  containerWidth="100px"
+                  imageHeight="100px"
+                  imageWidth="100px"
                   rotateAmplitude={12}
                   scaleOnHover={1.2}
                   showMobileWarning={false}
