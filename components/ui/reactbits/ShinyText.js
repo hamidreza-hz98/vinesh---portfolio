@@ -11,7 +11,7 @@ const ShinyText = ({
 
   return href ? (
     <Link
-      className={`px-4 py-1 rounded-full backdrop-blur-2xl border border-border shiny-text ${disabled ? "disabled" : ""} ${className}`}
+      className={`px-4 py-1 rounded-full backdrop-blur border border-border shiny-text ${disabled ? "disabled" : ""} ${className}`}
       href={href}
     >
       {text}

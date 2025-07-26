@@ -2,42 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
+/* --background: #0a0a0d;
+--foreground: #fafafa;
+--card: #0f0f11;
+--card-foreground: #fafafa;
+--popover: #0f0f11;
+--popover-foreground: #fafafa;
+--primary: #8c7bfa;
+--primary-foreground: #ffffff;
+--secondary: #ffc940;
+--secondary-foreground: #000000;
+--accent: #4af0d6;
+--accent-foreground: #181a1d;
+--muted: #232328;
+--muted-foreground: #9999a3;
+--destructive: #e63932;
+--destructive-foreground: #fafafa;
+--border: #2d2d30;
+--input: #2d2d30;
+--ring: #9684ff;
+--chart-1: #8c7bfa;
+--chart-2: #4af0d6;
+--chart-3: #ffc940;
+--chart-4: #e370f5;
+--chart-5: #f56a3d;
+--radius: 0.75rem; */
+
 @layer base {
   :root {
-    --background: 240 10% 4%; 
+    --background: 240 10% 4%;
 
-    --foreground: 0 0% 98%;              /* Bright white */
+    --foreground: 0 0% 98%; /* Bright white */
 
-    --card: 240 6% 6%;                   /* Slightly lighter than background */
+    --card: 240 6% 6%; /* Slightly lighter than background */
     --card-foreground: 0 0% 98%;
 
     --popover: 240 6% 6%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 245 95% 68%;              /* Electric Indigo */
-    --primary-foreground: 0 0% 100%;     /* Pure white for contrast */
+    --primary: 245 95% 68%; /* Electric Indigo */
+    --primary-foreground: 0 0% 100%; /* Pure white for contrast */
 
-    --secondary: 45 100% 58%;            /* Amber / Warm Yellow */
+    --secondary: 45 100% 58%; /* Amber / Warm Yellow */
     --secondary-foreground: 0 0% 0%;
 
-    --accent: 180 90% 65%;               /* Cyber Mint (Cyan-Turquoise blend) */
-    --accent-foreground: 222 47% 11%;    /* Very dark blue */
+    --accent: 180 90% 65%; /* Cyber Mint (Cyan-Turquoise blend) */
+    --accent-foreground: 222 47% 11%; /* Very dark blue */
 
     --muted: 240 5% 14%;
     --muted-foreground: 240 5% 60%;
 
-    --destructive: 0 80% 45%;            /* Strong red */
+    --destructive: 0 80% 45%; /* Strong red */
     --destructive-foreground: 0 0% 98%;
 
     --border: 240 4% 18%;
     --input: 240 4% 18%;
     --ring: 245 90% 70%;
 
-    --chart-1: 245 95% 68%;              /* Same as primary */
-    --chart-2: 180 90% 65%;              /* Same as accent */
-    --chart-3: 45 100% 58%;              /* Same as secondary */
-    --chart-4: 295 80% 70%;              /* Soft purple */
-    --chart-5: 12 90% 60%;               /* Orange-red */
+    --chart-1: 245 95% 68%; /* Same as primary */
+    --chart-2: 180 90% 65%; /* Same as accent */
+    --chart-3: 45 100% 58%; /* Same as secondary */
+    --chart-4: 295 80% 70%; /* Soft purple */
+    --chart-5: 12 90% 60%; /* Orange-red */
 
     --radius: 0.75rem;
   }
@@ -162,7 +188,7 @@
     rgba(255, 255, 255, 1) 50%,
     rgba(255, 255, 255, 0) 80%
   );
-  backdrop-filter: blur(20px);;
+  backdrop-filter: blur(20px);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -203,9 +229,7 @@
   font-size: 3rem;
   font-weight: 900;
   cursor: pointer;
-  transition:
-    filter 0.3s ease,
-    color 0.3s ease;
+  transition: filter 0.3s ease, color 0.3s ease;
 }
 
 .focus-word.active {
@@ -259,3 +283,140 @@
   border-top: none;
 }
 
+.star-border-container {
+  display: inline-block;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.border-gradient-bottom {
+  position: absolute;
+  width: 300%;
+  height: 50%;
+  opacity: 0.7;
+  bottom: -12px;
+  right: -250%;
+  border-radius: 50%;
+  animation: star-movement-bottom linear infinite alternate;
+  z-index: 0;
+}
+
+.border-gradient-top {
+  position: absolute;
+  opacity: 0.7;
+  width: 300%;
+  height: 50%;
+  top: -12px;
+  left: -250%;
+  border-radius: 50%;
+  animation: star-movement-top linear infinite alternate;
+  z-index: 0;
+}
+
+.inner-content {
+  position: relative;
+  border: 1px solid #222;
+  background: #000;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 16px 26px;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+@keyframes star-movement-bottom {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-100%, 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes star-movement-top {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100%, 0%);
+    opacity: 0;
+  }
+}
+
+.tilted-card-figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tilted-card-mobile-alert {
+  position: absolute;
+  top: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .tilted-card-mobile-alert {
+    display: block;
+  }
+  .tilted-card-caption {
+    display: none;
+  }
+}
+
+.tilted-card-inner {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.tilted-card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+  border-radius: 15px;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.tilted-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  will-change: transform;
+  transform: translateZ(30px);
+}
+
+.tilted-card-caption {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 4px 10px;
+  font-size: 10px;
+  color: #2d2d2d;
+  opacity: 0;
+  z-index: 3;
+}
+
+ .tilted-card-demo-text {
+    letter-spacing: -.5px;
+    font-style: italic;
+    border-radius: 15px;
+    box-shadow: 0 5px 30px #06001059;
+}

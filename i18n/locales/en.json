@@ -12,5 +12,13 @@
 
   "works_page_true_focus_text": "Vinesh Delivered Projects",
   "visit": "Visit",
-  "technologies": "Technologies:"
+  "technologies": "Technologies:",
+  "creative": "Creative",
+  "contact": "Contact",
+
+  "skills_page_header": "My Technical Skills",
+  "skills_page_rotating_text_1": "Solutions",
+  "skills_page_rotating_text_2": "Design",
+  "skills_page_rotating_text_3": "Technologies",
+  "skills_page_rotating_text_4": "Website"
 }

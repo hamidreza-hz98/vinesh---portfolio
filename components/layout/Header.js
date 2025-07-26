@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <div className="absolute top-12 left-1/2 -translate-x-1/2 w-full max-w-[90%] sm:max-w-4xl z-20">
-      <div className="flex items-center justify-between px-6 py-2 border border-border rounded-full backdrop-blur-lg">
+      <div className="flex items-center justify-between px-6 py-2 border border-border rounded-full backdrop-blur">
         <Link href="/" className="cursor-pointer flex items-center gap-2">
           <Image
             src="/images/placeholder.svg"
