@@ -39,7 +39,7 @@ const ProjectCard = ({ project, className = "" }) => {
               { t("technologies") }
               </p>
 
-              <div className="flex items-center justify-start space-x-2">
+              <div className="flex items-center justify-start space-x-2 ms-2">
                 {project.technologies.map((tech, index) => (
                   <a key={index} href={tech.url} target="_blank">
                     <img

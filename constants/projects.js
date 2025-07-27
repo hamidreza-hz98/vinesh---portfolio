@@ -488,12 +488,12 @@ export const projects = [
       {
         name: "HTML",
         url: "https://html.com/",
-        image: "/images/skills/",
+        image: "/images/skills/html.png",
       },
       {
         name: "CSS",
         url: "https://www.w3.org/Style/CSS/Overview.en.html",
-        image: "/images/skills/",
+        image: "/images/skills/css.png",
       },
       {
         name: "Javascript",
@@ -524,12 +524,12 @@ export const projects = [
       {
         name: "HTML",
         url: "https://html.com/",
-        image: "/images/skills/",
+        image: "/images/skills/html.png",
       },
       {
         name: "CSS",
         url: "https://www.w3.org/Style/CSS/Overview.en.html",
-        image: "/images/skills/",
+        image: "/images/skills/css.png",
       },
       {
         name: "Javascript",
