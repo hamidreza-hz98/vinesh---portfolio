@@ -9,7 +9,7 @@ const StarBorder = ({
 }) => {
   return (
     <Component
-      className={`star-border-container ${className}`}
+      className={`star-border-container backdrop-blur-sm  ${className}`}
       style={{
         padding: `${thickness}px 0`,
       }}

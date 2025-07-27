@@ -82,6 +82,22 @@
   }
 }
 
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+
+.dynamic-content a{
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .darkveil-canvas {
   width: 100% !important;
   height: 100% !important;
@@ -317,7 +333,6 @@
 .inner-content {
   position: relative;
   border: 1px solid #222;
-  background: #000;
   color: white;
   font-size: 16px;
   text-align: center;
@@ -419,4 +434,17 @@
     font-style: italic;
     border-radius: 15px;
     box-shadow: 0 5px 30px #06001059;
+}
+
+.text-block {
+  margin: 4vw;
+  max-width: 800px;
+  font-family: monospace;
+  font-size: clamp(14px, 4vw, 32px);
+  color: #fff;
+}
+
+.char {
+  will-change: transform;
+  display: inline-block;
 }
