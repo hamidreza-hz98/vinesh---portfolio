@@ -1,15 +1,15 @@
 "use client";
 
+import { getCurrentLocale, setLangDirection } from "@/utils/locale";
+
 import Container from "../common/Container";
 import LetterGlitch from "../ui/reactbits/LetterGlitch";
 import Link from "next/link";
 import Lottie from "lottie-react";
 import React from "react";
 import RotatingText from "../ui/reactbits/RotatingText";
-import ShinyText from "../ui/reactbits/ShinyText";
 import StarBorder from "../ui/reactbits/StarBorder";
 import TiltedCard from "../ui/reactbits/TiltedCard";
-import { getCurrentLocale } from "@/utils/locale";
 import scrollDownAnimation from "@/public/animations/scroll-down.json";
 import { skills } from "@/constants/skills";
 import { useTranslations } from "next-intl";
@@ -17,6 +17,7 @@ import { useTranslations } from "next-intl";
 const SkillsPageWrapper = () => {
   const t = useTranslations();
   const locale = getCurrentLocale();
+  const direction = setLangDirection(locale);
 
   return (
     <>
@@ -29,13 +30,17 @@ const SkillsPageWrapper = () => {
           smooth={true}
         />
 
-        <Container>
+        <Container className="px-4">
           <h1 className="text-foreground text-4xl font-bold">
             {t("skills_page_header")}
           </h1>
 
-          <div className="flex items-center justify-center space-x-4 mt-8">
-            <span className="text-destructive-foreground font-semibold text-2xl">
+          <div
+            className={`flex items-center justify-center mt-8 gap-4 ${
+              direction === "rtl" && " flex-row-reverse space-x-reverse"
+            }`}
+          >
+            <span className="text-foreground font-semibold text-2xl">
               {t("creative")}
             </span>
 
@@ -46,6 +51,7 @@ const SkillsPageWrapper = () => {
                 t("skills_page_rotating_text_3"),
                 t("skills_page_rotating_text_4"),
               ]}
+              splitBy="words"
               mainClassName="px-2 sm:px-2 md:px-3 bg-primary text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
               staggerFrom={"last"}
               initial={{ y: "100%" }}
@@ -101,7 +107,7 @@ const SkillsPageWrapper = () => {
                   showTooltip={true}
                   displayOverlayContent={true}
                   overlayContent={
-                    <p className="tilted-card-demo-text whitespace-nowrap text-foreground text-sm px-2 py-1">
+                    <p className="tilted-card-demo-text text-foreground text-sm px-2 py-1">
                       {item.name[locale]}
                     </p>
                   }

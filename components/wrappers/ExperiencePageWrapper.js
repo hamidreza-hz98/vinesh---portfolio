@@ -46,7 +46,7 @@ const ExperiencePageWrapper = () => {
           rotation={0}
         />
 
-        <Container>
+        <Container className="px-4">
           <BlurText
             text={t("experience_page_header")}
             delay={1000}
@@ -57,6 +57,7 @@ const ExperiencePageWrapper = () => {
 
           <ScrambledText
             className="scrambled-text-demo"
+            splitBy="words"
             radius={100}
             duration={1.2}
             speed={0.5}

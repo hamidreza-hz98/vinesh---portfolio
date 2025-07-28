@@ -1,4 +1,5 @@
 {
+  "vinesh_tech": "Vinesh Tech Group",
   "homepage_type_text_1": "Vinesh Tech Strategies",
   "homepage_type_text_2": "We Build Digital Experiences",
   "homepage_type_text_3": "Your Trusted Technology Partner",
@@ -38,14 +39,14 @@
 
   "my_journey": "My Journey",
   "my_journey_1": " My journey began during the COVID-19 pandemic in 2020. While most people were staying home, resting, and taking care of themselves, I decided to use that time to start learning web design. I began with the basics — HTML, CSS, and JavaScript — and practiced through various tools and challenges.",
-  "my_journey_2": " One of the most helpful resources for me at the time was thebook '57 Exercises for Programmers' by Brian P. Hogan. It gave me the structure and guidance I needed to keep moving forward.After gaining some confidence in the fundamentals, I started exploring frameworks like Bootstrap and Tailwind CSS, and soon after, I dived into React.js.",
+  "my_journey_2": " One of the most helpful resources for me at the time was the book '57 Exercises for Programmers' by Brian P. Hogan. It gave me the structure and guidance I needed to keep moving forward.After gaining some confidence in the fundamentals, I started exploring frameworks like Bootstrap and Tailwind CSS, and soon after, I dived into React.js.",
   "my_journey_3": " As I continued building on what I’d learned, I created several small practice projects to sharpen my skills. Around that time, I also applied for a position at Matican Group LLC, where I hoped to turn my passion into a profession.",
   "my_journey_4": "  Since 2021, I’ve also worked as a freelance developer, taking on real-world projects and helping clients bring their ideas to life. Looking back, I can proudly say — my dream came true.",
 
   "what_i_do": "What I Do",
   "what_i_do_1": " I offer modern, creative, and well-designed websites built using the latest and fastest technologies available.",
-  "what_i_do_2": " Whatever your website needs — from UI/UX design, businessanalysis, and landing page development to admin dashboardimplementation and website optimization — it’s all here in oneplace. You just need to reach out and share your businessideas and goals with me.",
-  "what_i_do_3": " Vinesh is my plan to go international — to connect with newbusiness partners around the world. Its knowledge basecontinues to grow every day. My colleagues and I work harderand smarter to be better than we were yesterday.",
+  "what_i_do_2": " Whatever your website needs — from UI/UX design, business analysis, and landing page development to admin dashboard implementation and website optimization — it’s all here in one place. You just need to reach out and share your business ideas and goals with me.",
+  "what_i_do_3": " Vinesh is my plan to go international — to connect with new business partners around the world. Its knowledge base continues to grow every day. My colleagues and I work harder and smarter to be better than we were yesterday.",
 
   "what_i_believe_in": "What I Believe In",
   "what_i_believe_in_1": " Building a great website isn’t just about using modern and fast technologies. The most important factor in creating a user-friendly digital experience is understanding the logic of your business — how it works, and how it can evolve in the digital space.",
@@ -55,5 +56,23 @@
   "beyond_the_screen_1": " I love to learn — whether or not it directly improves my professional work. I enjoy watching movies, walking, cycling, traveling, and connecting with new people.",
   "beyond_the_screen_2": "  One of my core values is helping others, no matter their age, gender, financial situation, social status, culture, or nationality. If I can help in any aspect of your life, don’t hesitate to ask. I truly enjoy making new friends and being of service.",
 
-  "thanks_for_reading": "Thanks for Reading All!"
+  "thanks_for_reading": "Thanks for Reading All!",
+
+  "contact_info": "Contact Me Via:",
+  "contact_form_header": "Contact Me Directly:",
+  "name": "Name",
+  "phone": "Phone",
+  "email": "Email",
+  "message": "Message",
+  "send_message": "Send Message",
+  "sending": "Sending",
+  "name_placeholder": "John Doe",
+  "phone_placeholder": "+123456789",
+  "email_placeholder": "you@example.com",
+  "message_placeholder": "Hi there! I have been looking for...",
+  "contact_form_error": "There was an error. Please try again.",
+  "contact_success_title": "Form Sent Successfully!",
+  "contact_success_description": "Thanks for contacting me! I will respond to you ASAP I can! STAY TUNED!",
+  "close": "Close",
+  "homepage": "Homepage"
 }

@@ -1,3 +1,5 @@
+"use client"
+
 import DarkVeil from "../ui/reactbits/DarkVeil";
 import GlassIcons from "../ui/reactbits/GlassIcons";
 import React from "react";

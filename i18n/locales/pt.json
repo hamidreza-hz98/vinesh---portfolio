@@ -1,3 +1,78 @@
 {
-  "Hello": "CHAOOO"
+  "vinesh_tech": "Vinesh Tecnologia",
+  "homepage_type_text_1": "Estratégias Tecnológicas da Vinesh",
+  "homepage_type_text_2": "Construímos Experiências Digitais",
+  "homepage_type_text_3": "Seu Parceiro Tecnológico de Confiança",
+  "homepage_type_text_4": "Implementação de Sites e Apps",
+
+  "homepage_header": "Construímos experiências digitais",
+  "homepage_description": "De interfaces bonitas a backends escaláveis, criamos soluções que destacam sua marca.",
+
+  "project_in_mind": "Tem um projeto em mente?",
+  "lets_talk": "Vamos conversar!",
+
+  "works_page_true_focus_text": "Projetos entregues pela Vinesh",
+  "visit": "Visitar",
+  "technologies": "Tecnologias:",
+  "creative": "Criativo",
+  "contact": "Contato",
+
+  "skills_page_header": "Minhas Habilidades Técnicas",
+  "skills_page_rotating_text_1": "Soluções",
+  "skills_page_rotating_text_2": "Design",
+  "skills_page_rotating_text_3": "Tecnologias",
+  "skills_page_rotating_text_4": "Website",
+
+  "experience_page_header": "Minhas Experiências de Trabalho",
+  "experience_page_description": "Aqui você verá mais de 4 anos de experiência em desenvolvimento de sites e apps usando as melhores tecnologias disponíveis.",
+
+  "about_circular_text": "QUEM SOU EU * MINHA JORNADA * O QUE FAÇO * EM QUE ACREDITO * ALÉM DA TELA *",
+  "about_me": "Sobre Mim",
+  "and": "e",
+  "vinesh_birth": "Nascimento da Vinesh",
+
+  "who_am_i": "Quem sou eu?!",
+  "who_am_i_1": "Olá! Meu nome é Hamidreza Hassanzadeh, um desenvolvedor full-stack apaixonado que começou do zero e agora busca ser um herói 😀.",
+  "who_am_i_2": "Sou apaixonado por criar experiências digitais funcionais e agradáveis. Tenho conhecimento em frontend e backend, gosto de construir sistemas escaláveis e APIs eficientes.",
+  "who_am_i_3": "A curiosidade sempre foi meu combustível — me impulsiona a aprender, construir, quebrar, corrigir e evoluir.",
+  "who_am_i_4": "Acredito em aprendizado contínuo, código limpo e soluções significativas para problemas reais.",
+
+  "my_journey": "Minha Jornada",
+  "my_journey_1": "Minha jornada começou durante a pandemia de COVID-19 em 2020. Enquanto muitos descansavam, comecei a estudar web design.",
+  "my_journey_2": "Um dos recursos mais úteis foi o livro '57 Exercises for Programmers' de Brian P. Hogan, que me deu estrutura para continuar.",
+  "my_journey_3": "Aprendi frameworks como Bootstrap e Tailwind CSS, depois entrei no mundo do React.js.",
+  "my_journey_4": "Desde 2021, também trabalho como freelancer. Olhando para trás, posso dizer com orgulho: meu sonho se tornou realidade.",
+
+  "what_i_do": "O que eu Faço",
+  "what_i_do_1": "Ofereço websites modernos, criativos e bem projetados com as tecnologias mais rápidas e atualizadas.",
+  "what_i_do_2": "Desde design de UI/UX até desenvolvimento de painéis de administração — tudo num só lugar. Basta me contatar.",
+  "what_i_do_3": "Vinesh é meu plano de internacionalização — para conectar com novos parceiros ao redor do mundo.",
+
+  "what_i_believe_in": "No que Acredito",
+  "what_i_believe_in_1": "Criar um bom site não é só sobre tecnologia. Entender o funcionamento do negócio é essencial.",
+  "what_i_believe_in_2": "A digitalização pode beneficiar qualquer empresa. Sua confiança é a chave do sucesso.",
+
+  "beyond_the_screen": "Além da Tela",
+  "beyond_the_screen_1": "Amo aprender — mesmo que não seja algo técnico. Gosto de filmes, caminhadas, ciclismo, viagens e conhecer novas pessoas.",
+  "beyond_the_screen_2": "Ajudar os outros é um dos meus valores. Se eu puder ajudar, com certeza ajudarei com prazer.",
+
+  "thanks_for_reading": "Obrigado por ler tudo!",
+
+  "contact_info": "Entre em contato por:",
+  "contact_form_header": "Entre em contato direto comigo:",
+  "name": "Nome",
+  "phone": "Telefone",
+  "email": "Email",
+  "message": "Mensagem",
+  "send_message": "Enviar Mensagem",
+  "sending": "Enviando",
+  "name_placeholder": "João Silva",
+  "phone_placeholder": "+351912345678",
+  "email_placeholder": "voce@exemplo.com",
+  "message_placeholder": "Olá! Estou à procura de...",
+  "contact_form_error": "Ocorreu um erro. Por favor, tente novamente.",
+  "contact_success_title": "Formulário Enviado com Sucesso!",
+  "contact_success_description": "Obrigado pelo contato! Responderei assim que possível. FIQUE LIGADO!",
+  "close": "Fechar",
+  "homepage": "Página Inicial"
 }

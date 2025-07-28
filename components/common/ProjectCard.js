@@ -9,7 +9,7 @@ const ProjectCard = ({ project, className = "" }) => {
 
   return (
     <div className={`relative w-full h-fit rounded-xl hover:scale-[105%] transition-transform duration-700 ${className}`.trim()}>
-      <div className="">
+      <div className="w-full min-h-[200px] overflow-hidden rounded-xl">
         <img
           src={project.image}
           alt={project.name[locale]}

@@ -44,11 +44,11 @@ export default {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         chart: {
-          "1": "hsl(var(--chart-1))",
-          "2": "hsl(var(--chart-2))",
-          "3": "hsl(var(--chart-3))",
-          "4": "hsl(var(--chart-4))",
-          "5": "hsl(var(--chart-5))",
+          1: "hsl(var(--chart-1))",
+          2: "hsl(var(--chart-2))",
+          3: "hsl(var(--chart-3))",
+          4: "hsl(var(--chart-4))",
+          5: "hsl(var(--chart-5))",
         },
       },
       borderRadius: {
@@ -59,4 +59,16 @@ export default {
     },
   },
   plugins: [require("tailwindcss-animate")],
+
+  safelist: [
+    "bg-primary",
+    "hover:bg-opacity-80",
+    "bg-green-500",
+    "bg-blue-500",
+    "bg-gradient-to-r",
+    "from-pink-500",
+    "to-yellow-500",
+    "bg-[#0270AD]",
+    "bg-gray-800",
+  ],
 };

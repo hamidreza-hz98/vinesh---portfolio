@@ -1,8 +1,10 @@
-"use client"
+"use client";
 
 import { motion, useAnimation, useMotionValue } from "framer-motion";
 
+import { setLangDirection } from "@/utils/locale";
 import { useEffect } from "react";
+import { useLocale } from "next-intl";
 
 const getRotationTransition = (duration, from, loop = true) => ({
   from,
@@ -28,7 +30,19 @@ const CircularText = ({
   onHover = "speedUp",
   className = "",
 }) => {
-  const letters = Array.from(text);
+  const locale = useLocale() || "en";
+  const direction = setLangDirection(locale);
+  const isRTL = direction === "rtl";
+
+  const segmenter = new Intl.Segmenter(locale, {
+    granularity: isRTL ? "word" : "grapheme",
+  });
+
+  let segments = Array.from(segmenter.segment(text), (s) => s.segment);
+
+  if (isRTL) {
+    segments = segments.reverse();
+  }
   const controls = useAnimation();
   const rotation = useMotionValue(0);
 
@@ -96,9 +110,9 @@ const CircularText = ({
       onMouseEnter={handleHoverStart}
       onMouseLeave={handleHoverEnd}
     >
-      {letters.map((letter, i) => {
-        const rotationDeg = (360 / letters.length) * i;
-        const factor = Math.PI / letters.length;
+      {segments.map((letter, i) => {
+        const rotationDeg = (360 / segments.length) * i;
+        const factor = Math.PI / segments.length;
         const x = factor * i;
         const y = factor * i;
         const transform = `rotateZ(${rotationDeg}deg) translate3d(${x}px, ${y}px, 0)`;
