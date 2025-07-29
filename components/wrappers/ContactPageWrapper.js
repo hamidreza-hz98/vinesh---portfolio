@@ -15,7 +15,7 @@ const ContactPageWrapper = () => {
 
   return (
     <>
-      <div className="w-full h-screen relative sm:overflow-x-hidden">
+      <div className="w-full h-screen relative sm:overflow-hidden">
         <LiquidChrome
           baseColor={[0.1, 0, 0.1]}
           speed={0.5}

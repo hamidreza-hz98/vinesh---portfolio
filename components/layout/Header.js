@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { getCurrentLocale, setLangDirection } from "@/utils/locale";
 
@@ -8,6 +8,7 @@ import Image from "next/image";
 import LanguageSwitcher from "../LanguageSwitcher";
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
+import clsx from "clsx"; // Optional, for cleaner className handling
 import { headerRoutes } from "@/constants/routes";
 import { useTranslations } from "next-intl";
 
@@ -18,10 +19,25 @@ const Header = () => {
   const isRTL = direction === "rtl";
 
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 800);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div className="fixed top-8 left-1/2 -translate-x-1/2 w-full max-w-[90%] sm:max-w-4xl z-20">
-      <div className="flex items-center justify-between px-6 py-2 border border-border rounded-full backdrop-blur-lg">
+    <div className="fixed top-8 left-1/2 -translate-x-1/2 w-full max-w-[90%] sm:max-w-4xl z-[60]">
+      <div
+        className={clsx(
+          "flex items-center justify-between px-6 py-2 border border-border rounded-full transition-all duration-300",
+          scrolled ? "backdrop-blur-lg bg-background/25" : "backdrop-blur-sm"
+        )}
+      >
         <Link href={`/${locale}`} className="cursor-pointer flex items-center gap-2">
           <Image
             src="/images/logo.svg"
@@ -31,7 +47,7 @@ const Header = () => {
             className="rounded-full"
             alt="Vinesh Tech Logo"
           />
-          <strong> {t("vinesh_tech")} </strong>
+          <span className="font-bold"> {t("vinesh_tech")} </span>
         </Link>
 
         {/* Desktop nav */}
@@ -56,10 +72,7 @@ const Header = () => {
                   <RxHamburgerMenu className="w-5 h-5" />
                 </button>
               </SheetTrigger>
-              <SheetContent
-                side={isRTL ? "left" : "right" }
-                className="w-64 sm:w-80"
-              >
+              <SheetContent side={isRTL ? "left" : "right"} className="w-64 sm:w-80">
                 <div className="flex flex-col gap-4 mt-4">
                   {headerRoutes.map((route, index) => (
                     <Link

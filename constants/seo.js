@@ -202,17 +202,14 @@ export const contactMetadata = {
   en: {
     title: "Contact — Let’s Connect",
     description: "Reach out to us through our contact form or social channels.",
-    ...defaultMetadata.en,
   },
   fa: {
     title: "تماس — در ارتباط باشیم",
     description: "از طریق فرم تماس یا شبکه‌های اجتماعی با ما در ارتباط باشید.",
-    ...defaultMetadata.fa,
   },
   pt: {
     title: "Contato — Fale Conosco",
     description:
       "Entre em contato conosco através do formulário ou redes sociais.",
-    ...defaultMetadata.pt,
   },
 };

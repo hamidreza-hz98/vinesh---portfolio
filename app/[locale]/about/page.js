@@ -1,12 +1,11 @@
 import AboutPageWrapper from '@/components/wrappers/AboutPageWrapper'
 import React from 'react'
 import { aboutMetadata } from '@/constants/seo';
-import { getCurrentLocale } from '@/utils/locale';
 
-const locale = getCurrentLocale();
-console.log(locale);
-
-export const metadata = aboutMetadata[locale];
+export async function generateMetadata({ params }) {
+  const locale = await params?.locale || "en";
+  return aboutMetadata[locale] || aboutMetadata.en;
+}
 
 const page = () => {
   return (
