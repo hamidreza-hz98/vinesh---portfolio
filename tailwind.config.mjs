@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        "2xs": { max: "400px" },
+      },
       colors: {
         background: "hsl(var(--background))",
         background_a: "hsl(var(--background) / 0.1)",

@@ -21,10 +21,10 @@ const Header = () => {
 
   return (
     <div className="fixed top-8 left-1/2 -translate-x-1/2 w-full max-w-[90%] sm:max-w-4xl z-20">
-      <div className="flex items-center justify-between px-6 py-2 border border-border rounded-full backdrop-blur">
-        <Link href="/" className="cursor-pointer flex items-center gap-2">
+      <div className="flex items-center justify-between px-6 py-2 border border-border rounded-full backdrop-blur-lg">
+        <Link href={`/${locale}`} className="cursor-pointer flex items-center gap-2">
           <Image
-            src="/images/placeholder.svg"
+            src="/images/logo.svg"
             width={48}
             height={48}
             sizes="100vw"
@@ -39,7 +39,7 @@ const Header = () => {
           {headerRoutes.map((route, index) => (
             <Link
               className="hover:text-primary transition"
-              href={route.link}
+              href={`/${locale}${route.link}`}
               key={index}
             >
               {route.name[locale]}
@@ -52,7 +52,7 @@ const Header = () => {
           <div className="flex items-center gap-2 sm:gap-4">
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
-                <button className="sm:hidden p-2 rounded-md hover:bg-muted transition">
+                <button className="sm:hidden p-2 rounded-md transition">
                   <RxHamburgerMenu className="w-5 h-5" />
                 </button>
               </SheetTrigger>
@@ -65,7 +65,7 @@ const Header = () => {
                     <Link
                       key={index}
                       className="text-lg font-medium hover:text-primary transition"
-                      href={route.link}
+                      href={`/${locale}${route.link}`}
                       onClick={() => setOpen(false)}
                     >
                       {route.name[locale]}

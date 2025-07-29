@@ -156,19 +156,19 @@ export const experiences = [
         description: {
           en: `
           <div>
-          <p> All Collaborations in <a href="/works" className="font-bold"> Works </a> page are my experiences in 
+          <p> All Collaborations in <a href="/en/works" className="font-bold"> Works </a> page are my experiences in 
           <a href="https://maticangroup.com/global/" target="_blank" className="font-bold"> Matican Group llc </a>.</p>
           </div>
           `,
           pt: `
           <div>
-          <p> Todas as colaborações listadas na página <a href="/works" className="font-bold"> Works </a> são experiências que tive na 
+          <p> Todas as colaborações listadas na página <a href="/pt/works" className="font-bold"> Works </a> são experiências que tive na 
           <a href="https://maticangroup.com/global/" target="_blank" className="font-bold"> Matican Group llc </a>.</p>
           </div>
           `,
           fa: `
           <div>
-          <p> تمام همکاری‌های ذکر شده در صفحه <a href="/works" className="font-bold"> نمونه‌کارها </a> مربوط به تجربیات من در 
+          <p> تمام همکاری‌های ذکر شده در صفحه <a href="/fa/works" className="font-bold"> نمونه‌کارها </a> مربوط به تجربیات من در 
           <a href="https://maticangroup.com/global/" target="_blank" className="font-bold"> شرکت Matican Group </a> می‌باشد.</p>
           </div>
           `,

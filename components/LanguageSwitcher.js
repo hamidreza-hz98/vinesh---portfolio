@@ -43,14 +43,24 @@ export default function LanguageSwitcher() {
       storedLocale === "fa" ? "rtl" : "ltr";
   }, []);
 
-  const handleLanguageChange = (newLocale) => {
-    setLocale(newLocale);
-    setCookie("NEXT_LOCALE", newLocale);
-    document.documentElement.dir =
-      newLocale === "fa" ? "rtl" : "ltr";
-    window.location.reload();
-    setIsOpen(false);
-  };
+const handleLanguageChange = (newLocale) => {
+  setLocale(newLocale);
+  setCookie("NEXT_LOCALE", newLocale);
+  document.documentElement.dir = newLocale === "fa" ? "rtl" : "ltr";
+
+  const pathParts = window.location.pathname.split("/");
+
+  if (["en", "fa", "pt"].includes(pathParts[1])) {
+    pathParts[1] = newLocale;
+  } else {
+    pathParts.unshift("", newLocale);
+  }
+
+  const newPath = pathParts.join("/");
+  window.location.href = newPath;
+
+  setIsOpen(false);
+};
 
   const toggleDropdown = () => {
     setIsOpen((prev) => !prev);

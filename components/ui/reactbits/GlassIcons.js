@@ -26,7 +26,7 @@ const GlassIcons = ({ items, className }) => {
     <div className={`icon-btns ${className || ""}`}>
       {items.map((item, index) => (
         <Link
-        href={item.href}
+        href={`/${locale}${item.href}`}
           key={index}
           className={`icon-btn ${item.customClass || ""}`}
           aria-label={item.label[locale]}

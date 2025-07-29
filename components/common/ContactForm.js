@@ -21,6 +21,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import { Textarea } from "@/components/ui/textarea";
+import { getCurrentLocale } from "@/utils/locale";
 import { useTranslations } from "next-intl";
 
 const ContactSchema = Yup.object().shape({
@@ -32,6 +33,7 @@ const ContactSchema = Yup.object().shape({
 
 const ContactForm = () => {
   const t = useTranslations();
+  const locale = getCurrentLocale()
   const [open, setOpen] = useState(false);
 
   return (
@@ -155,7 +157,7 @@ const ContactForm = () => {
             </AlertDialogCancel>
             <AlertDialogAction asChild>
               <Link
-                href="/"
+                href={`/${locale}`}
                 className="w-auto h-full px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90"
               >
                 {t("homepage")}

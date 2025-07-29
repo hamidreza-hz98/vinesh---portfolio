@@ -67,7 +67,7 @@ const SkillsPageWrapper = () => {
           <div className="mt-2 p-4 flex items-center justify-center">
             <h2 className="text-xl me-2"> {t("project_in_mind")} </h2>
             <StarBorder
-              href="/contact"
+              href={`/${locale}/contact`}
               as={Link}
               className=""
               color="#8c7bfa"
