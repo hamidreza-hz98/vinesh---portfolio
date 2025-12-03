@@ -23,10 +23,12 @@ const ContactPageWrapper = () => {
           interactive={true}
         />
 
-        <Container className="top-[60%] sm:top-[200px] md:top-[120px]">
+        <div
+          className={`absolute inset-0 2xs:top-[700px] top-[700px] md:top-24 flex flex-col items-center justify-center`}
+        >
           <div className="py-8 flex flex-col w-full sm:w-fit items-center sm:items-start justify-center sm:flex-row sm:justify-between gap-8 sm:gap-16">
             <div className="p-8 w-80 rounded-2xl shadow shadow-primary backdrop-blur-3xl ">
-              <h1 className="text-2xl font-bold mb-4"> { t("contact_info") } </h1>
+              <h1 className="text-2xl font-bold mb-4"> {t("contact_info")} </h1>
 
               {contactInfoItems.map((item, index) => (
                 <a
@@ -44,11 +46,14 @@ const ContactPageWrapper = () => {
             </div>
 
             <div className="p-8 w-80 rounded-2xl shadow shadow-primary backdrop-blur-3xl">
-              <h1 className="text-2xl font-bold mb-4"> { t("contact_form_header") } </h1>
+              <h1 className="text-2xl font-bold mb-4">
+                {" "}
+                {t("contact_form_header")}{" "}
+              </h1>
               <ContactForm />
             </div>
           </div>
-        </Container>
+        </div>
       </div>
     </>
   );
